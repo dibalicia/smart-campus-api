@@ -16,23 +16,19 @@
 
     <dependencies>
 
-        <!-- Jersey Servlet Container - the actual JAX-RS runtime for Tomcat.
-             The original pom only had javax.ws.rs-api which is just the spec,
-             not the implementation. Jersey is needed to actually run on Tomcat. -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
             <version>2.32</version>
         </dependency>
 
-        <!-- HK2 - dependency injection used internally by Jersey -->
+     
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
             <version>2.32</version>
         </dependency>
 
-        <!-- Jackson - handles automatic Java object to JSON conversion -->
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
