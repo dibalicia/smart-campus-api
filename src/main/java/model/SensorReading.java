@@ -1,14 +1,11 @@
 package model;
 
-/**s
- * Represents a single historical reading captured by a sensor.
- * Each reading has a unique ID, an epoch timestamp, and the recorded value.
- */
+
 public class SensorReading {
 
-    private String id;        // UUID - unique reading event identifier
-    private long timestamp;   // epoch time in milliseconds
-    private double value;     // the actual measurement recorded
+    private String id;        
+    private long timestamp;   
+    private double value;   
 
     // Default constructor required by Jackson
     public SensorReading() {}
