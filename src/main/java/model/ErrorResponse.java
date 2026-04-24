@@ -1,15 +1,11 @@
 package model;
 
-/**
- * A standardised error response body.
- * All error responses across the API use this structure so clients
- * always get a predictable JSON format when something goes wrong.
- */
+
 public class ErrorResponse {
 
-    private String error;    // short error category, e.g. "Not Found"
-    private String message;  // human-readable description of what went wrong
-    private int status;      // the HTTP status code
+    private String error;    
+    private String message;  
+    private int status;      
 
     public ErrorResponse() {}
 
