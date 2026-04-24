@@ -1,19 +1,15 @@
 package model;
 
-/**
- * Represents a sensor deployed in a Smart Campus room.
- * A sensor belongs to exactly one room and can have one of three statuses:
- * ACTIVE, MAINTENANCE, or OFFLINE.
- */
+
 public class Sensor {
 
-    private String id;            // e.g. "TEMP-001"
-    private String type;          // e.g. "Temperature", "CO2", "Occupancy"
-    private String status;        // "ACTIVE", "MAINTENANCE", or "OFFLINE"
-    private double currentValue;  // most recent reading value
-    private String roomId;        // foreign key linking to a Room
+    private String id;         
+    private String type;          
+    private String status;        
+    private double currentValue;  
+    private String roomId;        
 
-    // Default constructor required by Jackson
+
     public Sensor() {}
 
     public Sensor(String id, String type, String status, double currentValue, String roomId) {
