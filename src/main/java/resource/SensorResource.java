@@ -14,8 +14,7 @@ import java.util.List;
 @Path("/sensors")
 public class SensorResource {
 
-    // GET /api/v1/sensors
-    // Optional query parameter ?type=CO2 filters results by sensor type.
+  
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllSensors(@QueryParam("type") String type) {
@@ -34,8 +33,7 @@ public class SensorResource {
         return Response.ok(sensorList).build();
     }
 
-    // GET /api/v1/sensors/{sensorId}
-    // Returns a single sensor by ID
+ 
     @GET
     @Path("/{sensorId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -50,8 +48,7 @@ public class SensorResource {
         return Response.ok(sensor).build();
     }
 
-    // PUT /api/v1/sensors/{sensorId}
-    // Updates an existing sensor (useful for changing status)
+  
     @PUT
     @Path("/{sensorId}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -76,8 +73,7 @@ public class SensorResource {
         return Response.ok(existing).build();
     }
 
-    // POST /api/v1/sensors
-    // Registers a new sensor. The roomId must reference an existing room.
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -122,8 +118,7 @@ public class SensorResource {
         return Response.status(Response.Status.CREATED).entity(sensor).build();
     }
 
-    // Sub-resource locator for sensor readings.
-    // No HTTP method annotation - intentional for sub-resource locator pattern.
+
     @Path("{sensorId}/readings")
     public SensorReadingResource getReadingsResource(@PathParam("sensorId") String sensorId) {
         return new SensorReadingResource(sensorId);
