@@ -3,18 +3,15 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Represents a physical room in the Smart Campus.
- * Rooms contain sensors which are tracked via their IDs.
- */
+
 public class Room {
 
-    private String id;        // e.g. "LIB-301"
-    private String name;      // e.g. "Library Quiet Study"
-    private int capacity;     // maximum occupancy for safety
-    private List<String> sensorIds = new ArrayList<>(); // IDs of sensors in this room
+    private String id;       
+    private String name;     
+    private int capacity;     
+    private List<String> sensorIds = new ArrayList<>(); 
 
-    // Default constructor required by Jackson for JSON deserialisation
+  
     public Room() {}
 
     public Room(String id, String name, int capacity) {
