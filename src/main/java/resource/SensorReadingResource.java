@@ -21,7 +21,7 @@ public class SensorReadingResource {
         this.sensorId = sensorId;
     }
 
-    // GET /api/v1/sensors/{sensorId}/readings
+    
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getReadings() {
@@ -38,7 +38,6 @@ public class SensorReadingResource {
         return Response.ok(history).build();
     }
 
-    // GET /api/v1/sensors/{sensorId}/readings/{readingId}
     @GET
     @Path("/{readingId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -57,7 +56,7 @@ public class SensorReadingResource {
                 .build();
     }
 
-    // POST /api/v1/sensors/{sensorId}/readings
+   
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
